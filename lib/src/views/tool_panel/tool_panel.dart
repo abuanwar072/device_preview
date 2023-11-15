@@ -79,7 +79,7 @@ class _ToolPanel extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Device preview',
+          'FlutterLibrary.com Preview',
           style: theme.textTheme.headline6?.copyWith(
             fontSize: 14,
             fontWeight: FontWeight.bold,
@@ -95,16 +95,16 @@ class _ToolPanel extends StatelessWidget {
                 onPressed: onClose,
               )
             : null,
-        actions: [
-          if (!isModal)
-            Switch(
-              value: isEnabled,
-              onChanged: (v) {
-                final state = context.read<DevicePreviewStore>();
-                state.data = state.data.copyWith(isEnabled: v);
-              },
-            ),
-        ],
+        // actions: [
+        // if (!isModal)
+        //   Switch(
+        //     value: isEnabled,
+        //     onChanged: (v) {
+        //       final state = context.read<DevicePreviewStore>();
+        //       state.data = state.data.copyWith(isEnabled: v);
+        //     },
+        //   ),
+        // ],
       ),
       body: Stack(
         children: [

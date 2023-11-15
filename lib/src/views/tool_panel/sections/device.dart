@@ -95,33 +95,33 @@ class DeviceSection extends StatelessWidget {
               );
             },
           ),
-        if (this.orientation && canRotate)
-          ListTile(
-            key: const Key('orientation'),
-            title: const Text('Orientation'),
-            subtitle: Text(
-              () {
-                switch (orientation) {
-                  case Orientation.landscape:
-                    return 'Landscape';
-                  case Orientation.portrait:
-                    return 'Portrait';
-                }
-              }(),
-            ),
-            trailing: AnimatedContainer(
-              duration: const Duration(milliseconds: 200),
-              transformAlignment: Alignment.center,
-              transform: Matrix4.rotationZ(
-                orientation == Orientation.landscape ? 2.35 : 0.75,
-              ),
-              child: const Icon(Icons.screen_rotation),
-            ),
-            onTap: () {
-              final state = context.read<DevicePreviewStore>();
-              state.rotate();
-            },
-          ),
+        // if (this.orientation && canRotate)
+        //   ListTile(
+        //     key: const Key('orientation'),
+        //     title: const Text('Orientation'),
+        //     subtitle: Text(
+        //       () {
+        //         switch (orientation) {
+        //           case Orientation.landscape:
+        //             return 'Landscape';
+        //           case Orientation.portrait:
+        //             return 'Portrait';
+        //         }
+        //       }(),
+        //     ),
+        //     trailing: AnimatedContainer(
+        //       duration: const Duration(milliseconds: 200),
+        //       transformAlignment: Alignment.center,
+        //       transform: Matrix4.rotationZ(
+        //         orientation == Orientation.landscape ? 2.35 : 0.75,
+        //       ),
+        //       child: const Icon(Icons.screen_rotation),
+        //     ),
+        //     onTap: () {
+        //       final state = context.read<DevicePreviewStore>();
+        //       state.rotate();
+        //     },
+        //   ),
         if (frameVisibility)
           ListTile(
             key: const Key('frame'),

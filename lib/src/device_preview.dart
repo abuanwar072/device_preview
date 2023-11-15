@@ -109,9 +109,10 @@ class DevicePreview extends StatefulWidget {
   /// All the default tools included in the menu : [DeviceSection], [SystemSection],
   /// [AccessibilitySection] and [SettingsSection].
   static const List<Widget> defaultTools = <Widget>[
+    // Edit Those for FlutterLibrary.com
     DeviceSection(),
     SystemSection(),
-    AccessibilitySection(),
+    // AccessibilitySection(),
     SettingsSection(),
   ];
 
