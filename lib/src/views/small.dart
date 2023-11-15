@@ -83,16 +83,16 @@ class _BottomToolbar extends StatelessWidget {
     );
     return Material(
       child: ListTile(
-        title: const Text('Device Preview'),
+        title: const Text('FlutterLibrary Device Preview'),
         onTap: isEnabled ? showPanel : null,
         leading: const Icon(Icons.tune),
-        trailing: Switch(
-          value: isEnabled,
-          onChanged: (v) {
-            final state = context.read<DevicePreviewStore>();
-            state.data = state.data.copyWith(isEnabled: v);
-          },
-        ),
+        // trailing: Switch(
+        //   value: isEnabled,
+        //   onChanged: (v) {
+        //     final state = context.read<DevicePreviewStore>();
+        //     state.data = state.data.copyWith(isEnabled: v);
+        //   },
+        // ),
       ),
     );
   }
